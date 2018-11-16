@@ -1,13 +1,15 @@
 extends layout
 
 block content
-  
-  table(id="example" ,class="display cell-border",width="100%")
-    thead
-      tr
-        each header in ['Pid' , 'Command' , 'CPU' , 'Memory']
-           th=header
+  div.panel.panel-primary
+      div.panel-heading='Table'
+      table(id="example" ,class="display cell-border",width="100%")
+        thead
+          tr
+            each header in ['Pid' , 'Command' , 'CPU' , 'Memory']
+              th=header
   
   script(src="https://code.jquery.com/jquery-3.3.1.js")
   script(src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js")
   script(src="/javascripts/table.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
